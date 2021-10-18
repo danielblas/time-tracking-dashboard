@@ -1,0 +1,43 @@
+@use '../util/' as *;
+
+// Margin setting
+
+main {
+    position: relative;
+    min-height: 100vh;
+}
+
+.cards {
+    margin: rem(80) rem(24);
+
+    @include breakpoint('medium'){
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 11%;
+    }
+}
+
+// Grid
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(20);
+
+    @include breakpoint('medium'){
+        grid-template-columns: 1fr 3fr;
+        gap: rem(30);
+    }
+
+    // User card
+    &__user {
+        background-color: $dark-blue;
+        border-radius: rem(15);
+
+        &__info {
+            border-radius: inherit;
+        }
+    }
+
+}
