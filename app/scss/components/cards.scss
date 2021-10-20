@@ -85,6 +85,14 @@
                 font-weight: 400;
                 text-decoration: none;
                 color: $desaturated-blue;
+
+                &:hover {
+                    color: white;
+                }
+            }
+
+            .active {
+                color: white;
             }
             
         }
